@@ -54,7 +54,13 @@ At the end of SOGo's vhost, add:
 ```
 Here we use a unix socket to connect to **uwsgi**.
 
-Reload nginx, and test via curl or browser :
+Reload nginx:
+```
+service nginx configtest
+service nginx reload
+```
+
+Test via curl or browser:
 ```
 curl https://example.com/SOGo/WebServerResources/sjsxc/ajax/cgi-bin/wsgi
 
