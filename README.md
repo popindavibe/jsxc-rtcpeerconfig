@@ -15,7 +15,10 @@ Being a happy user of SOGo, I early on activated Turn configuration with long-te
 [https://github.com/jsxc/jsxc](JSXC)'s github community helped me understand how to set it up and test it. There is already a PHP script included with jsxc (might not be up-to-date on sjsxc) which enables dynamic creation of ephemeral credentials (timestamp is part of the equation, so it has to be on-demand), **if you have PHP on your server**.
 SOGo being objective-C, the server I got it running on has no PHP installed on it. 
 
-This was the perfect opportunity to write a little python script and install uwsgi to be able to call that script through nginx.
+This was the perfect opportunity to write a little python script and install uwsgi to be able to call that script through nginx. 
+Some extra info :
+ * integration of jsxc in SOGo (sjsxc) documentation can be found on jsxc's github Wiki under [https://github.com/jsxc/jsxc/wiki/Install-sjsxc-%28SOGo%29](Install sjsxc (SOGo))
+ * a coturn server's configuration example can also be found on jsxc's github Wiki [https://github.com/jsxc/jsxc/wiki/WebRTC-how-to](WebRTC How To)
 
 ### How it works
 The cgi-bin directory contains all python-related files. Actual python files as well as the config files for uswgi and TURN authentication. Once everything is set up, anything reaching `/cgi-bin/*` will invariably result in a call to the python script wsgi.py, which itself is a callable for `getturncredentials.py`.
@@ -68,3 +71,5 @@ curl https://example.com/SOGo/WebServerResources/sjsxc/ajax/cgi-bin/wsgi
 ```
 note : here the credential is a _hash_, not the **real** shared secret. The hash is generated from the secret and the username, which itself is a gathering of timestamp and username.
 
+### The extra mile
+You should now have a symmetrical NAT-proofed visio solution.
