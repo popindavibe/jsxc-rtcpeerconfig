@@ -37,8 +37,12 @@ cd /usr/lib/GNUstep/SOGo/WebServerResources/sjsxc/ajax
 
 git clone https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig.git .
 
-uwsgi --plugin python --json cgi-bin/sjsxc.json
+mv cgi-bin/sjsxc.json /etc/apps-available/
+ln -s /etc/uwsgi/apps-available/sjsxc.json /etc/uwsgi/apps-enabled/sjsxc.json
+
+service uwsgi start sjsxc
 ```
+
 Now you just have to tell Nginx to send everything addressed to `/cgi-bin` to the uwsgi daemon.
 
 At the end of SOGo's vhost, add:
@@ -75,7 +79,7 @@ Finally, in you sjsxc/js folder on SOGo's server, modify **sjsxc.js** RTCPeedCon
 Go to directory and make a copy:
 ```
 cd /usr/lib/GNUstep/SOGo/WebServerResources/sjsxc/js
-cp -p sjsxc.js sjsxc.js.bak
+cp -p sjsxc.js sjsxc.js.orig
 ```
 
 Create the patch file sjsxc.patch containing:
@@ -91,8 +95,8 @@ Apply patch:
 ```
 patch -u < sjsxc.patch
 ```
+That's it, reload you SOGo login page, you should be all set.
 
-### The extra mile
-You should now have a symmetrical NAT-proofed visio solution. Here below is the added settings to get our uswgi daemon to start up at boot time.
-
+### Conclusion
+You should now have a symmetrical NAT-proofed WebRTC visio solution based on ephemeral credentials to authenticate your server on the TURN server.
 
