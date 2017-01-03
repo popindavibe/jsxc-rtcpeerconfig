@@ -13,7 +13,8 @@ So, it's not perfect, but can be the only way (if any) depending of you local ne
 ### Why this project
 Being a happy user of SOGo, I early on activated Turn configuration with long-term credentials. Problem is: the secret password of my turn user was visible and downloadable from the js script. Not optimal. I learnt that ephemeral credentials was the way to go to solve that issue.
 [https://github.com/jsxc/jsxc](JSXC)'s github community helped me understand how to set it up and test it. 
-There is already a PHP script included with jsxc (might not be up-to-date on sjsxc) which enables dynamic creation of ephemeral credentials (timestamp is part of the equation, so it has to be on-demand), **if you have PHP on your server**.
+
+There is already a **PHP** script included with jsxc (might not be up-to-date on sjsxc) which enables dynamic creation of ephemeral credentials (timestamp is part of the equation, so it has to be on-demand).
 SOGo being objective-C, the server I got it running on has no PHP installed on it. 
 
 This was the perfect opportunity to write a little python script and install uwsgi to be able to call that script through nginx. 
