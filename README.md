@@ -82,7 +82,7 @@ cd /usr/lib/GNUstep/SOGo/WebServerResources/sjsxc/js
 cp -p sjsxc.js sjsxc.js.orig
 ```
 
-Create the patch file sjsxc.patch containing:
+Create the patch file **sjsxc.patch** containing:
 ```
 --- sjsxc.js
 +++ sjsxc.js
