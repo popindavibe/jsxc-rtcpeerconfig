@@ -18,4 +18,8 @@ So, it's not perfect, but can be the only way (if any) depending of you local ne
 
 This little development was made for WebRTC end-nodes to be able to connect from a **symmetrical NAT** activated LAN router.
 
-See the [Wiki](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig/wikis/home) section for howto install and deploy the scripts and requirements associated on your SOGo server.
+See the [Wiki](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig/wikis/home) section for howto install and deploy the scripts and requirements associated on your SOGo server. We assume you already have the following installed and configured :
+ * SOGo server installed and configured
+ * coturn server installed (available in debian repositories) and configured (does not have to be on the same server, can be first tested with long-term credentials as a POC)
+ * sjsxc deployed and working on your SOGo Web interface
+
