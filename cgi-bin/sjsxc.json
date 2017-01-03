@@ -1,13 +1,14 @@
 {
     "uwsgi": {
         "socket": "/tmp/uwsgi.sock",
-        "workers": 3,
-        "wsgi-file": "wsgi.py",
+        "workers": 1,
+        "plugin" : "python",
+        "chdir" : "/usr/lib/GNUstep/SOGo/WebServerResources/sjsxc/ajax/cgi-bin",
+        "module": "wsgi:application",
         "master": true,
-        "processes": 5,
+        "processes": 2,
         "uid": "www-data",
         "gid": "www-data",
         "buffer-size": 32768
     }
 }
-
