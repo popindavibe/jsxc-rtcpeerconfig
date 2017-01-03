@@ -71,5 +71,28 @@ curl https://example.com/SOGo/WebServerResources/sjsxc/ajax/cgi-bin/wsgi
 ```
 note : here the credential is a _hash_, not the **real** shared secret. The hash is generated from the secret and the username, which itself is a gathering of timestamp and username.
 
+Finally, in you sjsxc/js folder on SOGo's server, modify **sjsxc.js** RTCPeedConfig url's setting. 
+Go to directory and make a copy:
+```
+cd /usr/lib/GNUstep/SOGo/WebServerResources/sjsxc/js
+cp -p sjsxc.js sjsxc.js.bak
+```
+
+Create the patch file sjsxc.patch containing:
+```
+--- sjsxc.js
++++ sjsxc.js
+@@ -174 +174 @@
+-            url: '/SOGo.woa/WebServerResources/sjsxc/ajax/getturncredentials.php'
++            url: '/SOGo.woa/WebServerResources/sjsxc/ajax/cgi-bin/wsgi'
+```
+
+Apply patch:
+```
+patch -u < sjsxc.patch
+```
+
 ### The extra mile
-You should now have a symmetrical NAT-proofed visio solution.
+You should now have a symmetrical NAT-proofed visio solution. Here below is the added settings to get our uswgi daemon to start up at boot time.
+
+
