@@ -10,4 +10,4 @@ Being peer-to-peer and only browser-dependant (meaning no other software require
 Thankfully, **ICE protocol** and coturn's TURN/STUN server came to the rescue. A **TURN** server is what it says : Traversal Using Relays around NAT. It is the only way to manage WebRTC connection through the NAT. The TURN server is in charge of relaying each and every packets between the two nodes (goodbye peer-to-peer and hello overhead on TURN server).
 So, it's not perfect, but can be the only way (if any) depending of you local network.
 
-See the [https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig/wikis/home](Wiki) section for howto install and deploy the scripts and requirements associated on your SOGo server.
+See the [Wiki](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig/wikis/home]) section for howto install and deploy the scripts and requirements associated on your SOGo server.
