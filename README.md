@@ -1,7 +1,7 @@
 ## RTCPeerConfig via python and jsxc on SOGo with ephemeral auth via Turn server's API
 
 ### Forewords
-This project was made to be able to enable video-chat between two end nodes running [https://www.jsxc.org/](JSXC) within a SOGo v3 Web interface (via WebRTC), covering the case of the dreaded **symmetrical NAT**. 
+This project was made to be able to enable video-chat between two end nodes running [JSXC](https://www.jsxc.org/) within a SOGo v3 Web interface (via WebRTC), covering the case of the dreaded **symmetrical NAT**. 
 
 WebRTC (Web Real-Time Communication) is a collection of communications protocols and application programming interfaces that enable real-time communication over peer-to-peer connections. -- **Wikipedia**
 
