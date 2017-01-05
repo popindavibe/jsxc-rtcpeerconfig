@@ -1,4 +1,4 @@
-## RTCPeerConfig via python and jsxc on SOGo with ephemeral auth via Turn server's API
+## RTCPeerConfig via python and jsxc on SOGo with ephemeral auth via TURN server's API
 
 ### Forewords
 This little development was made for WebRTC end-nodes to be able to communicate through a **symmetrical NAT** activated LAN router.
