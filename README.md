@@ -1,5 +1,8 @@
 ## RTCPeerConfig via python and jsxc on SOGo with ephemeral auth via TURN server's API
 
+**I now use GitLab for my projects. This Github repository is only a mirror. Please reach out for me [there](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig) if you need to interact (you can sign in with your Github account).**
+
+
 ### Forewords
 This little development was made for WebRTC end-nodes to be able to communicate through a **symmetrical NAT** activated LAN router.
 This project can been seen as the last step to cover as widely as possible successful establishment of video-communication between two end nodes/ Web browsers running [JSXC](https://www.jsxc.org/) on a [SOGo v3](https://sogo.nu/) Website (using WebRTC). 
