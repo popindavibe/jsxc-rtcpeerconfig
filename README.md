@@ -1,6 +1,6 @@
 ## RTCPeerConfig via python and jsxc on SOGo with ephemeral auth via TURN server's API
 
-**I now use GitLab for my projects. This Github repository is only a mirror. Please reach out for me [there](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig) if you need to interact (you can sign in with your Github account).**
+**I now use GitLab for my projects. The Github repository is only a mirror. Please reach out for me [there](https://gitlab.nomagic.fr/popi/jsxc-rtcpeerconfig) if you need to interact (you can sign in with your Github account).**
 
 
 ### Forewords
