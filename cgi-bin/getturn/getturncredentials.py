@@ -25,7 +25,7 @@ def turn_request_handler(json_data):
     for key in data["servers"]:
         tempresult = dict()
 
-        if 'username' in key and 'secret' in key: 
+        if 'username' in key and 'secret' in key:
             user = str(timestamp) + ":" + key["username"]
             secret = sign_request(str(key["secret"]), str(user))
             tempresult['username'] = user
@@ -34,22 +34,16 @@ def turn_request_handler(json_data):
         # Fill the dictionnary
         tempresult['urls'] = key["urls"]
 
-        # insère dans la liste
+        # insert in the list
         fullresult['iceServers'].append(tempresult)
-
 
     # export the dict
     jsonExport = (json.dumps(fullresult))
+
+    # RTCPeerConfig is ready
     return jsonExport
 
-# Exécuté seulement si le fichier du module est appelé directement
-if __name__ == "__main__": 
+# Main
+if __name__ == "__main__":
     print "called directly"
-
-## Pour appeler en direct
-#json_file = 'turnConf.inc'
-#json_data = open(json_file)
-#result = turn_request_handler(json_data)
-#json_data.close()
-#print result
 
